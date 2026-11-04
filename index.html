@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple tool for verifying product prices.">
+    <title>Price Verification Tool</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="prelim.css">
+</head>
+<body>
+    <main class="page-shell">
+        <section class="price-card" aria-labelledby="page-title">
+            <div class="card-heading">
+                <span class="eyebrow">PRODUCT LOOKUP</span>
+                <h1 id="page-title">PRICE VERIFICATION</h1>
+                <p>Select a product to retrieve its current listed price.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="productSelect">PRODUCT NAME</label>
+                <select id="productSelect" disabled>
+                    <option value="">SELECT PRODUCT</option>
+                </select>
+            </div>
+
+            <button id="getPriceButton" type="button" disabled>GET PRICE</button>
+
+            <div class="price-result" aria-live="polite" aria-atomic="true">
+                <span class="price-label">Price</span>
+                <strong id="priceDisplay">P 0.00</strong>
+            </div>
+
+            <p id="message" class="message" role="status"></p>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
